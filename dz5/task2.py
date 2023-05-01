@@ -2,11 +2,8 @@
 # описывающие случайную возрастающую последовательность. Порядок элементов менять нельзя.
 # [1, 5, 2, 3, 4, 6, 1, 7] => [1, 2, 3] или [2, 7] или [4, 6, 7] и т.д.
 from random import randint
-#n = int(input('Введите количество чисел в списке: '))
 n = 10
 ls = [int((randint(1, 10))) for i in range(n)]
-#ls = [1, 5, 2, 3, 4, 6, 1, 7, 9, 10]
-#print(ls, end=' => ')
 print(ls)
 print()
 lsup = []
@@ -19,56 +16,12 @@ for j in range(n):
     lsup.append(ls[j])
     for i in range(j + 2, n):
         if (temp1 < temp2) and (temp2 < ls[i]):
-            #if temp2 not in lsup:
             lsup.append(temp2)
             lsup.append(ls[i])
             temp1 = temp2
-            #temp2 = ls[i]
-            #fl = 2
-        # if (temp1 < temp2) and (temp2 > ls[i]):
-        #     lsup.append(temp2)
-        #     temp1 = temp2
-        #     temp2 = ls[i]
-            #fl = 1
-        #if (temp1 > temp2) and (temp2 < ls[i]):
-            #if fl == 2:
-         #   lsup.append(ls[i])
-            #temp1 = temp2
-            #temp2 = ls[i]
-            #fl = 1
-
     if len(lsup) > 1:
-        #print(lsup, end=' ==> ')
-        #print(set(lsup))
         print(lsup)
     lsup = []
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
