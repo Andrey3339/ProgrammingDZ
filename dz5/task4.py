@@ -28,9 +28,10 @@ print('', field[0],'\n', field[1], '\n', field[2])
 fl = 0
 i = 0
 d = [1, 2, 3]
+count = 0
 x = None
 y = None
-while fl == 0:
+while fl == 0 and count < 9:
     if i % 2 == 0:
         fl1 = 0
         fl2 = 0
@@ -46,6 +47,8 @@ while fl == 0:
                     field[int(x) - 1][int(y) - 1] = 'x'
                     print('', field[0],'\n', field[1], '\n', field[2])
                     fl1 = 1
+                    count += 1
+                    print(count)
                 else:
                     print(f'На этом месте уже стоит {field[x - 1][y - 1].upper()} ')
             else:
@@ -63,6 +66,8 @@ while fl == 0:
                     field[int(x) - 1][int(y) - 1] = 'o'
                     print('', field[0],'\n', field[1], '\n', field[2])
                     fl2 = 1
+                    count += 1
+                    print(count)
                 else:
                     print(f'На этом месте уже стоит {field[x - 1][y - 1].upper()} ')
             else:
